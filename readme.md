@@ -1,6 +1,6 @@
 # Simple Agility Competition System
 
-##Features
+## Features
 
 ### Admin
 * register competition
