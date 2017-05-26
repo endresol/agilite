@@ -17,10 +17,14 @@ class Signup extends Component {
     
     Accounts.createUser({email, password}, (err) => {
       console.log('signup', err );
+      if (err) {
+        this.setState({
+          error: err.reason,
+        });
+      }
     });
-    // this.setState({
-    //  error: 'Noe gikk galt',
-    // });
+    
+    
   }
   render() {
     return (
