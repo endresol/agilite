@@ -9,6 +9,10 @@ class Login extends Component {
     };
   }
   
+  onSubmit() {
+    console.log('submitting');
+  }
+  
   render() {
     return (
       <div>
