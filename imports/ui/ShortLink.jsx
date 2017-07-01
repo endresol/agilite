@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
+import { Accounts } from 'meteor/accounts-base';
+
 import { history } from 'react-router-dom';
 
 class ShortLink extends Component {
   logout () {
-    console.log('hei, logout');
-    
-    this.props.history.push('/');
+    Accounts.logout();
   }
   render() {
     return (
-      <div> 
+      <div>
         <h2>In Link</h2>
-        <button onClick={this.logout.bind(this)}>Logg up</button>
+        <button onClick={this.logout.bind(this)}>Logg ut</button>
       </div>
     );
   }

@@ -9,23 +9,23 @@ class Signup extends Component {
       error: '',
     };
   }
-  
+
   onSubmit(e) {
     e.preventDefault();
+
     const email = this.refs.email.value.trim();
     const password = this.refs.password.value.trim();
-    
+
     Accounts.createUser({email, password}, (err) => {
       console.log('signup', err );
       if (err) {
-        this.setState({
-          error: err.reason,
-        });
+        this.setState({ error: err.reason });
+      } else {
+        this.setState({ error: '' });
       }
     });
-    
-    
   }
+
   render() {
     return (
       <div>
